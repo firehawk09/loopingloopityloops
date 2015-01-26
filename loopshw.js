@@ -83,7 +83,7 @@ console.assert(average(2, 4, 6, 8) === 5)
 
 // 3. find the largest number of the inputs (returns the largest input (A NUMBER))
 
-function largest(){
+function largest() {
     "use strict"
     // parse arguments into an array
     var args = [].slice.call(arguments);
@@ -93,9 +93,9 @@ function largest(){
 
     var theLargestNumber = 0;
 
-    args.forEach(function(number){
+    args.forEach(function(number) {
 
-        if(theLargestNumber < number){
+        if (theLargestNumber < number) {
             theLargestNumber = number;
         }
 
@@ -105,7 +105,7 @@ function largest(){
 
 }
 
-console.assert( largest(2, 4, 6, 8) === 8 )
+console.assert(largest(2, 4, 6, 8) === 8)
 
 
 
@@ -115,7 +115,7 @@ console.assert( largest(2, 4, 6, 8) === 8 )
 
 // 4. find the longest string of the inputs (returns the longest input (A STRING))
 
-function longest(){
+function longest() {
     "use strict"
     // parse arguments into an array
     var args = [].slice.call(arguments);
@@ -125,9 +125,9 @@ function longest(){
 
     var theLongestWord = '';
 
-    args.forEach(function(word){
+    args.forEach(function(word) {
 
-        if (word.length > theLongestWord.length){
+        if (word.length > theLongestWord.length) {
             theLongestWord = word;
 
         }
@@ -137,7 +137,7 @@ function longest(){
 
 }
 
-console.assert( longest('the' , 'quick' , 'brown' , 'fox') === 5 )
+console.assert(longest('the', 'quick', 'brown', 'fox') === 5)
 
 
 
@@ -147,20 +147,20 @@ console.assert( longest('the' , 'quick' , 'brown' , 'fox') === 5 )
 
 // 5. write a function that can sort an array of Date objects (returns a NEW ARRAY of Date's)
 
-function sort(){
+function sort() {
     // parse arguments into an array
     var args = [].slice.call(arguments);
 
     // .. do something with each element of args
     // YOUR CODE HERE
-        args.sort(function(a , b){
-            return a>b
+    args.sort(function(a, b) {
+        return a > b
             // if (a>b) return true;
             // else     return false;
 
-        });
+    });
 
-        return args;
+    return args;
 }
 
 var dates = [
@@ -194,17 +194,17 @@ console.assert(
 
 var array = [6, 3, 5, 2, 4, 1]
 
-array.sort(function(a, b){
-    return a>b
+array.sort(function(a, b) {
+    return a > b
 
 });
 
 
 
 // console.log(array);
-console.assert(array[0]==1)
-console.assert(array[5]==6)
-// console.assert(array == [1, 2, 3, 4, 5, 6]);
+console.assert(array[0] == 1)
+console.assert(array[5] == 6)
+    // console.assert(array == [1, 2, 3, 4, 5, 6]);
 
 
 
@@ -213,9 +213,9 @@ console.assert(array[5]==6)
 
 /**
  * .concat()
-*/
+ */
 
-var makes = [ "dodge", "nissan", "astonMartin"]
+var makes = ["dodge", "nissan", "astonMartin"]
 var model = ["viper", "hardbody", "one77"]
 var color = ["orange", "red", "emeraldGreen"]
 
@@ -224,14 +224,14 @@ var makesModelColor = makes.concat(model, color);
 console.log(makesModelColor)
 console.log(makesModelColor[0])
 
-console.assert(makesModelColor[0]==="dodge")
-
+console.assert(makesModelColor[0] === "dodge")
+console.assert(makesModelColor[1] === "nissan")
 
 
 
 /**
  * .indexof()
-*/
+ */
 
 
 
@@ -243,7 +243,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .split()
-*/
+ */
 
 
 
@@ -255,7 +255,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .join()
-*/
+ */
 
 
 
@@ -266,7 +266,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .pop()
-*/
+ */
 
 
 
@@ -277,7 +277,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .push()
-*/
+ */
 
 
 
@@ -288,7 +288,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .slice()
-*/
+ */
 
 
 
@@ -298,7 +298,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .splice()
-*/
+ */
 
 
 
@@ -308,7 +308,7 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  * .shift()
-*/
+ */
 
 
 
@@ -318,45 +318,58 @@ console.assert(makesModelColor[0]==="dodge")
 
 /**
  *. unshift()
-*/
+ */
 
 
 
 
 
-
+// ---------------------------------------Filter and map return new arrays
 
 /**
  *. filter()
-*/
+ */
+
+// [1, 2, 3, 4, 5, 6].filter(function(value, key) { //------------Matts notes
+
+//     return value % 2 !== = 0;
+
+
+
+
+// })[1, 3, 5]
 
 
 
 
 
 
+// ---------------------------------------Filter and map return new arrays
 
 /**
  * .map()
-*/
-
-
-
-
-
-
-/**
- * PART III
- *
- * Fill in the sections below marked 'YOUR CODE HERE'.
- *
- * The code below should find all customers whose first-names start with 'J',
- * map() those people into an array of objects that have a name property:
- *
- * i.e. { name : c.firstname + " " + c.lastname }
- *
- * then sort them alphabetically
  */
+
+// [1, 2, 3, 4, 5, 6].map(function(value, key) {//------------Matts notes
+
+//     return value * 2;
+
+// })[2, 4, 6, 8, 10, 12]
+
+
+
+// /**
+//  * PART III--------------------------> Matts notes
+//  *
+//  * Fill in the sections below marked 'YOUR CODE HERE'.
+//  *
+//  * The code below should find all customers whose first-names start with 'J',
+//  * map() those people into an array of objects that have a name property:
+//  *
+//  * i.e. { name : c.firstname + " " + c.lastname }
+//  *
+//  * then sort them alphabetically
+//  */
 
 // // set up arrays
 // var numbers = [1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6];
@@ -378,18 +391,76 @@ console.assert(makesModelColor[0]==="dodge")
 
 // console.log(customers);
 
-// var projections = customers
-// .filter(function(c) {
+// var projections = customers.filter(function(c) {
+//     // find all customers whose names start with 'j'
 //     // YOUR CODE HERE
+//     return c.firstname[0] === "j";
 // })
-// .map(function(c) {
-//     // YOUR CODE HERE
-// })
-// .sort(sortByName);
 
-// function sortByName(c1, c2) {
+// console.log(projections);
+
+
+
+// projections = projections.map(function(c) {
+//     // turn each object into { name:firstname + lastname }
+//     return {
+//         name: [c.firstname, c.lastname].join(" ")
+//     };
+// })
+
+
+
+// console.log(projections);
+
+// projections.sort(sortByName);
+
+// function(c1, c2) {
 //     "use strict";
 //     //...
 // }
 
 // console.log(projections);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /**
+// *--------------Matts Notes-------------------
+// */
+
+
+// a = [1, 2, 3, 4, 5, 6]
+// a.reduce( function(prev, current, index, array){
+//     console.log("prev: ", prev, "current: ", current, "sum: ", prev+current)
+//     return prev + current;
+// })
